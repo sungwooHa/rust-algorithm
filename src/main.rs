@@ -1,3 +1,5 @@
+use rust_algorithm::active;
+
 fn main() {
-    println!("Hello, world!");
+    active();
 }
