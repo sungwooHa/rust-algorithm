@@ -57,7 +57,7 @@ pub mod problem10171{
 pub mod problem10172{
     pub fn problem() {
         println!("|\\_/|");
-        println!("|q p|   /}");
+        println!("|q p|   /}}");
         println!("( 0 )\"\"\"\\");
         println!("|\"^\"`    |");
         println!("||_/=\\\\__|");
