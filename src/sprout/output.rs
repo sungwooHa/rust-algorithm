@@ -63,3 +63,14 @@ pub mod problem10172{
         println!("||_/=\\\\__|");
     }
 }
+
+pub mod problem25083{
+    pub fn problem(){
+        println!("         ,r'\"7");
+        println!("r`-_   ,'  ,/");
+        println!(" \\. \". L_r'");
+        println!("   `~\\/");
+        println!("      |");
+        println!("      |");
+    }
+}
