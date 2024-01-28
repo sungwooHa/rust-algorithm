@@ -1,6 +1,6 @@
-mod sprout;
 mod runner;
+mod sprout;
 
 pub fn active() {
-    sprout::inputNCalc::problem10869::problem()
+    sprout::array_proble::problem10807::problem()
 }

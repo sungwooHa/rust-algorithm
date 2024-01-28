@@ -1,4 +1,4 @@
-pub mod problem1000{
+pub mod problem1000 {
     pub fn problem() {
         let mut input = String::new();
         std::io::stdin().read_line(&mut input).unwrap();
@@ -9,7 +9,7 @@ pub mod problem1000{
     }
 }
 
-pub mod problem10998{
+pub mod problem10998 {
     use std::io::Read;
 
     pub fn problem() {
@@ -22,7 +22,7 @@ pub mod problem10998{
     }
 }
 
-pub mod problem10869{
+pub mod problem10869 {
     use std::io::Read;
     pub fn problem() {
         let mut input = String::new();
@@ -38,7 +38,7 @@ pub mod problem10869{
     }
 }
 
-pub mod problem1008{
+pub mod problem1008 {
     use std::io::Read;
     pub fn problem() {
         let mut input = String::new();
@@ -50,7 +50,7 @@ pub mod problem1008{
     }
 }
 
-pub mod problem11382{
+pub mod problem11382 {
     use std::io::Read;
     pub fn problem() {
         let mut input = String::new();
