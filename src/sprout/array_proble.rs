@@ -79,18 +79,17 @@ pub mod problem10807 {
     }
 }
 
-pub mod problem5597{
+pub mod problem5597 {
     //제줄 안한 2명 찾기.
-    pub fn problem(){
-
+    pub fn problem() {
         const NUMB_STUDENT: i32 = 30;
-        let mut student_list : [i32; NUMB_STUDENT as usize] = [-1; NUMB_STUDENT as usize];
+        let mut student_list: [i32; NUMB_STUDENT as usize] = [-1; NUMB_STUDENT as usize];
 
-        for _ in 0..NUMB_STUDENT-2 {
+        for _ in 0..NUMB_STUDENT - 2 {
             let mut input = String::new();
             std::io::stdin().read_line(&mut input).unwrap();
             let mut iter = input.split_whitespace();
-            let student_number : i32 = iter.next().unwrap().parse().unwrap();
+            let student_number: i32 = iter.next().unwrap().parse().unwrap();
             student_list[(student_number - 1) as usize] = student_number;
         }
 
@@ -98,6 +97,47 @@ pub mod problem5597{
             if student_list[index as usize] == -1 {
                 println!("{}", index + 1);
             }
+        }
+    }
+}
+
+pub mod problem2738 {
+    //두 행렬의 덧셈
+    pub fn problem() {
+        let mut input = String::new();
+        std::io::stdin().read_line(&mut input).unwrap();
+        let mut iter = input.split_whitespace();
+        let row: usize = iter.next().unwrap().parse().unwrap();
+        let col: usize = iter.next().unwrap().parse().unwrap();
+
+        let mut matrix: Vec<Vec<i32>> = Vec::new();
+        for _ in 0..row {
+            let mut input = String::new();
+            std::io::stdin().read_line(&mut input).unwrap();
+            let mut iter = input.split_whitespace();
+            let mut row: Vec<i32> = Vec::new();
+            for _ in 0..col {
+                let number: i32 = iter.next().unwrap().parse().unwrap();
+                row.push(number);
+            }
+            matrix.push(row);
+        }
+
+        for idx_row in 0..row {
+            let mut input = String::new();
+            std::io::stdin().read_line(&mut input).unwrap();
+            let mut iter = input.split_whitespace();
+            for idx_col in 0..col {
+                let number: i32 = iter.next().unwrap().parse().unwrap();
+                matrix[idx_row][idx_col] += number;
+            }
+        }
+
+        for idx_row in 0..row {
+            for idx_col in 0..col {
+                print!("{} ", matrix[idx_row][idx_col]);
+            }
+            println!();
         }
     }
 }
