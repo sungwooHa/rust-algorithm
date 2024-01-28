@@ -78,3 +78,26 @@ pub mod problem10807 {
         print!("{}", numb_target);
     }
 }
+
+pub mod problem5597{
+    //제줄 안한 2명 찾기.
+    pub fn problem(){
+
+        const NUMB_STUDENT: i32 = 30;
+        let mut student_list : [i32; NUMB_STUDENT as usize] = [-1; NUMB_STUDENT as usize];
+
+        for _ in 0..NUMB_STUDENT-2 {
+            let mut input = String::new();
+            std::io::stdin().read_line(&mut input).unwrap();
+            let mut iter = input.split_whitespace();
+            let student_number : i32 = iter.next().unwrap().parse().unwrap();
+            student_list[(student_number - 1) as usize] = student_number;
+        }
+
+        for index in 0..NUMB_STUDENT {
+            if student_list[index as usize] == -1 {
+                println!("{}", index + 1);
+            }
+        }
+    }
+}
