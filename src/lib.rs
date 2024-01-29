@@ -2,5 +2,5 @@ mod runner;
 mod sprout;
 
 pub fn active() {
-    sprout::array_proble::problem2738::problem()
+    sprout::array_problem::problem2738::problem()
 }
