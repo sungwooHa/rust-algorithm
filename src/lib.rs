@@ -3,5 +3,5 @@ mod runner;
 mod sprout;
 
 pub fn active() {
-    bronze::lv3::problem25270()
+    bronze::lv2::problem5346()
 }
