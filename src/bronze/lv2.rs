@@ -1,3 +1,5 @@
+use std::result;
+
 pub fn problem5346() {
     //평면상의 거리 찾기.
     //기준 (X,Y)로 부터 가장 가까운 거리를 찾는다.
@@ -7,7 +9,7 @@ pub fn problem5346() {
     fn distance(cp : (i32, i32), dest : (i32, i32)) -> f32 {
         let (x, y) = cp;
         let (x1, y1) = dest;
-        return ((x1 - x).pow(2) + (y1 - y).pow(2) * 100).floor() / 100;
+        (((x1 - x).pow(2) + (y1 - y).pow(2) * 100) as f32).floor() / 100.0
     }
 
     let mut input = String::new();
