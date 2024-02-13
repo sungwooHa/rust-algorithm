@@ -17,7 +17,7 @@ pub fn problem11502() {
     for idx in 0..number_test {
         let number = numbers[idx as usize];
         //소수 군집 만들기
-        //에라토스테네스의 체
+        //에라토스테네스의 체 (입력숫자 이하, 3개 합이 자기자신 넘을 수 없으니까)
         //지우기로 날림!
         let mut prime = vec![true; number as usize + 1];
         prime[0] = false; //안씀
@@ -31,15 +31,14 @@ pub fn problem11502() {
             }
         }
 
-        println!("{:?}", prime);
         let mut result = Vec::new();
         for i in 2..number + 1 {
             if prime[i as usize] {
                 result.push(i);
             }
         }
-
         let mut is_possible = false;
+        //연속해서 나올 수 있음.
         for i in 0..result.len() {
             for j in i..result.len() {
                 for k in j..result.len() {
