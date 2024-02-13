@@ -33,12 +33,12 @@ pub fn problem5364() {
         let dist = distance(cp, plant);
         plants_with_dist.push((plant, dist));
     }
-    
+
     let res = plants_with_dist.iter().min_by(|a, b| a.1.total_cmp(&b.1));
     //plants_with_dist.sort_by(|a, b| a.1.total_cmp(&b.1).unwrap());
 
     println!("{} {}", cp.0, cp.1);
-    println!("{} {}", res.unwrap().0.0, res.unwrap().0.1);
+    println!("{} {}", res.unwrap().0 .0, res.unwrap().0 .1);
     println!("{}", res.unwrap().1);
     //println!("{} {}", plants_with_dist[0].0 .0, plants_with_dist[0].0 .1);
     //println!("{}", plants_with_dist[0].1);
