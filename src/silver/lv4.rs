@@ -58,3 +58,17 @@ pub fn problem11502() {
         }
     }
 }
+
+pub fn problem1015() {
+    let mut input = String::new();
+    std::io::stdin().read_line(&mut input).unwrap();
+    let number: i32 = input.trim().parse().unwrap();
+
+    let numbers: Vec<i32> = (0..number)
+        .map(|_| {
+            let mut input = String::new();
+            std::io::stdin().read_line(&mut input).unwrap();
+            input.trim().parse().unwrap()
+        })
+        .collect();
+}
